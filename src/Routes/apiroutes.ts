@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getFilmesController } from "../Controller/apicontroller";
+import { getFilmesController } from "../Controller/filmescontroller";
 
 export const FilmesRoutes:Router = Router()
 
