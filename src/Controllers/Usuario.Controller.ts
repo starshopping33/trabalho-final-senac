@@ -1,7 +1,8 @@
 import { Request, Response } from "express";
 import { createUserService } from "../../src/Service/CreateUserService";
 import { createUser } from "../../src/Schemas/User.Schema";
-import { getalluserservice } from "../Service/getalluser.Service";
+import { getalluserservice } from "../Service/GetAllUser.Service";
+
 
 
 export const createUserControler =  async(req:Request,res:Response)=>{

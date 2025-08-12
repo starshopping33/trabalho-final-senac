@@ -2,7 +2,9 @@ import { Router } from "express";
 
 import { ValidateDataMiddleware } from "../Middleware/ValidateData.Middleware";
 import { CreateFavoritarFIlmesSchema } from "../Schemas/FavoritarFilmes.Schemas";
-import { FavoritarFilmesController, getFilmesController } from "../Controllers/filmescontroller";
+import { FavoritarFilmesController, getFilmesController } from "../Controllers/FilmesController";
+
+
 
 export const FilmesRoutes:Router = Router()
 
