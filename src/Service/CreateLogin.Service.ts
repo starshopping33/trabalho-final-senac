@@ -18,7 +18,7 @@ export const createLoginService=async(loginData:iCreateLogin):Promise<string>=>{
         throw new AppError("Credenciais inválidas",401)
     }
     const descrypt = await compare(loginData.password,findUser.password)
-   console.log(descrypt,"decrypt")
+   
    if(!descrypt){
     throw new AppError("Credenciais inválidas",401)
    }

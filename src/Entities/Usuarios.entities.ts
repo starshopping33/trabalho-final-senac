@@ -15,6 +15,10 @@ export class Usuarios {
     @Column()
     password: string
 
+    @Column({type:"boolean",default:false})
+    isadmin:boolean
+
+
     @BeforeInsert()
     @BeforeUpdate()
     hashPassword(){
