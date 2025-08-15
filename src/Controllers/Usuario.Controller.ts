@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { createUserService } from "../../src/Service/CreateUserService";
-import { createUser } from "../../src/Schemas/User.Schema";
+
 import { getalluserservice } from "../Service/GetAllUser.Service";
 
 
