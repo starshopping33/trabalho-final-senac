@@ -14,6 +14,6 @@
     "outDir": "./dist",
     "resolveJsonModule": true
   },
-  "include": ["src"],
+  "include": ["src", "node_modules/Controllers"],
   "exclude": ["node_modules"]
 }
