@@ -13,5 +13,5 @@ export const returnUserSchema = createUserSchema.extend({
 
 export const returnalluserschemas = returnUserSchema.array()
 
-export type createUser = z.infer<typeof createUserSchema>
-export type ReturnUserSchema = z.infer<typeof returnUserSchema>
+export type icreateUser = z.infer<typeof createUserSchema>
+export type iReturnUserSchema = z.infer<typeof returnUserSchema>

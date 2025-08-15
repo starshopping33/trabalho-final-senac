@@ -1,10 +1,10 @@
-import { Request, Response } from "express";
+
 import { Repository } from "typeorm";
 import { Usuarios } from "../Entities/Usuarios.entities";
 import { AppDataSource } from "../data-source";
-import { returnalluserschemas, ReturnUserSchema } from "../Schemas/User.Schema";
+import { iReturnUserSchema, returnalluserschemas,  } from "../Schemas/User.Schema";
 
-export const getalluserservice = async():Promise<ReturnUserSchema[]>=>{
+export const getalluserservice = async():Promise<iReturnUserSchema[]>=>{
 
     const UserRepository:Repository<Usuarios> = AppDataSource.getRepository(Usuarios)
     
