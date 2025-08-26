@@ -3,11 +3,13 @@ import { icreatecomentario, ReturnComentarioSchemas } from "../Schemas/Comentari
 import { Comentario } from "../Entities/Comentario.entities";
 import { AppDataSource } from "../data-source";
 
-export const ComentarioService = async(ComentarioData:icreatecomentario):Promise<icreatecomentario>=>{
+export const ComentarioService = async(ComentarioData:icreatecomentario,userId:number):Promise<icreatecomentario>=>{
 
     const ComentarioRepository:Repository<Comentario> = AppDataSource.getRepository(Comentario)
 
-    const CreateComentario = ComentarioRepository.create(ComentarioData)
+    const CreateComentario = ComentarioRepository.create({...ComentarioData,usuarios:{
+        id:userId
+    }})
     await ComentarioRepository.save(CreateComentario)
 
     const comentario = ReturnComentarioSchemas.parse(CreateComentario)

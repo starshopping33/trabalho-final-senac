@@ -14,9 +14,9 @@ import { ComentarioRoutes } from './Routes/Comentario.Routes'
  app.use(express.json())
 app.use("/cadastro",UserRoutes)
 app.use("/login",Loginroutes)
+app.use("/comentario",ComentarioRoutes)
 app.use("/admin",AdminRoutes)
 app.use("/filmes",FilmesRoutes)
-app.use("/comentario",ComentarioRoutes)
 
 app.use(handleErrors)
  export default app
