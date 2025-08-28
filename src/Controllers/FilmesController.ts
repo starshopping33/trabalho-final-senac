@@ -2,7 +2,7 @@ import e, { Request, Response } from "express";
 
 import { FavoritarFilmesService } from "../Service/CreateFavoritarFilmes.Service";
 import { iCreateFavoritar } from "../Schemas/FavoritarFilmes.Schemas";
-import { getFilmesService } from "../Service/GetFilmes.service";
+import { getFilmesService } from "../Service/getfilmes.service";
 import { GetAllFilmesFavService } from "../Service/GetAllFilmesFav.Service";
 import { DeleteFilmeFavService } from "../Service/DeleteFilmeFav.Service";
 
