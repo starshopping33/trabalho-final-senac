@@ -4,8 +4,8 @@ import { AppDataSource } from "../data-source";
 import { AppError } from "../error";
 import jwt from "jsonwebtoken"
 import {compare} from "bcryptjs"
-import { iCreateLogin } from "../Schemas/Login.Schema";
-export const createLoginService=async(loginData:iCreateLogin):Promise<string>=>{
+import { iCreateLogin, iRetunrLogin, returnLoginSchema } from "../Schemas/Login.Schema";
+export const createLoginService=async(loginData:iCreateLogin):Promise<iRetunrLogin>=>{
 
     const userRepository:Repository<Usuarios> = AppDataSource.getRepository(Usuarios)
 
@@ -33,6 +33,11 @@ export const createLoginService=async(loginData:iCreateLogin):Promise<string>=>{
             subject:String(findUser.id)
         }
     )
-        return token
+
+    const user = returnLoginSchema.parse({
+         token,
+         usuario:findUser
+    })
+        return user
     
 }
