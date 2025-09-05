@@ -6,6 +6,6 @@ export const ValidateDataMiddleware =
     const ValidateData = Schema.parse(req.body);
 
     req.body = ValidateData;
-
+    console.log("data mid")
     return next()
 }

@@ -19,7 +19,8 @@ Jwt.verify(token,process.env.SECRET_KEY!,async(error,decoded:any)=>{
 
      req.User = {
             id: decoded.id,
-           email: decoded.email
+           email: decoded.email,
+           isadmin:decoded.isadmin
         }
         console.log(decoded,"decoded")
         
