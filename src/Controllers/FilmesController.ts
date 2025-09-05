@@ -8,8 +8,8 @@ import { DeleteFilmeFavService } from "../Service/DeleteFilmeFav.Service";
 
 
 export const getFilmesController= async(req:Request,res:Response):Promise<Response>=>{
-
-        const filmes = await getFilmesService()
+        const page = req.query.page as string
+        const filmes = await getFilmesService(page)
         return res.status(200).json(filmes)
 }
 
