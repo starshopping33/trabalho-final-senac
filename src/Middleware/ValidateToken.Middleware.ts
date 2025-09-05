@@ -14,7 +14,9 @@ token = token.split(" ")[1]
 
 Jwt.verify(token,process.env.SECRET_KEY!,async(error,decoded:any)=>{
     if(error){
-        throw new AppError(error.message,401)
+        // throw new AppError(error.message,401)
+        
+        return res.status(401).json(error?.message)
     }
 
      req.User = {

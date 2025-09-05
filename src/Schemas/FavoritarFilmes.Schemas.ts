@@ -3,8 +3,8 @@ import z, { number, string } from "zod";
 export const CreateFavoritarFIlmesSchema = z.object({
 usuario_id:number(),
 titulo:string(),
-filme_id:number()
-
+filme_id:number(),
+poster_path:z.string()
 })
 
 export const ReturnFavoritarFilmeSchema = CreateFavoritarFIlmesSchema.extend({

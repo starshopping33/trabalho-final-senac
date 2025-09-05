@@ -16,4 +16,6 @@ export class Favoritos{
     @Column()
     titulo:string
 
+    @Column()
+    poster_path:string
 }
